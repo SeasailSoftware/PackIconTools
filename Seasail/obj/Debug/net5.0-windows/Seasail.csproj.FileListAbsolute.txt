@@ -1,0 +1,15 @@
+G:\Seasail\Tencent\QHTicket\Seasail\obj\Debug\net5.0-windows\Seasail.csprojAssemblyReference.cache
+G:\Seasail\Tencent\QHTicket\Seasail\obj\Debug\net5.0-windows\Seasail.Properties.Resources.resources
+G:\Seasail\Tencent\QHTicket\Seasail\obj\Debug\net5.0-windows\Seasail.csproj.GenerateResource.cache
+G:\Seasail\Tencent\QHTicket\Seasail\obj\Debug\net5.0-windows\Seasail.GeneratedMSBuildEditorConfig.editorconfig
+G:\Seasail\Tencent\QHTicket\Seasail\obj\Debug\net5.0-windows\Seasail.AssemblyInfoInputs.cache
+G:\Seasail\Tencent\QHTicket\Seasail\obj\Debug\net5.0-windows\Seasail.AssemblyInfo.cs
+G:\Seasail\Tencent\QHTicket\Seasail\obj\Debug\net5.0-windows\Seasail.csproj.CoreCompileInputs.cache
+G:\Seasail\Tencent\QHTicket\Seasail\bin\Debug\net5.0-windows\Seasail.dll.config
+G:\Seasail\Tencent\QHTicket\Seasail\bin\Debug\net5.0-windows\Seasail.deps.json
+G:\Seasail\Tencent\QHTicket\Seasail\bin\Debug\net5.0-windows\Seasail.dll
+G:\Seasail\Tencent\QHTicket\Seasail\bin\Debug\net5.0-windows\ref\Seasail.dll
+G:\Seasail\Tencent\QHTicket\Seasail\bin\Debug\net5.0-windows\Seasail.pdb
+G:\Seasail\Tencent\QHTicket\Seasail\obj\Debug\net5.0-windows\Seasail.dll
+G:\Seasail\Tencent\QHTicket\Seasail\obj\Debug\net5.0-windows\ref\Seasail.dll
+G:\Seasail\Tencent\QHTicket\Seasail\obj\Debug\net5.0-windows\Seasail.pdb

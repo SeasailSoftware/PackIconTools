@@ -1,0 +1,13 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="clr-namespace:System;assembly=System.Runtime">
+    <s:String x:Key="ShellViewModel">MahApps.Metro.IconPacksTools</s:String>
+    <s:String x:Key="s_Assembly">Assembly</s:String>
+    <s:String x:Key="s_Brush">Brush</s:String>
+    <s:String x:Key="s_OutputFormat">Output Format</s:String>
+    <s:String x:Key="s_Generate">Generate</s:String>
+    <s:String x:Key="s_Size">Size</s:String>
+    <s:String x:Key="s_SavePath">Save Path</s:String>
+    
+</ResourceDictionary>
