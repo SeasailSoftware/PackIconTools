@@ -17,13 +17,13 @@ namespace PackIconTools.Utils
         {
             using (MemoryStream ms = new MemoryStream())
             {
-                PngBitmapEncoder encoder = new PngBitmapEncoder();
+                var encoder = new PngBitmapEncoder();
                 encoder.Frames.Add(BitmapFrame.Create(ToBitmapSource(drawingImage, width, height)));
                 encoder.Save(ms);
 
                 using (System.Drawing.Bitmap bmp = new System.Drawing.Bitmap(ms))
                 {
-                    return new System.Drawing.Bitmap(bmp);
+                    return ResizeImage(bmp, new System.Drawing.Size(width, height));
                 }
             }
         }
@@ -38,19 +38,31 @@ namespace PackIconTools.Utils
             RenderTargetBitmap bmp = new RenderTargetBitmap(width, height, 96, 96, PixelFormats.Pbgra32);
             bmp.Render(drawingVisual);
             return bmp;
+
         }
 
-        public static string ImageSuffix(this System.Drawing.Imaging.ImageFormat format)
+        /// <summary>
+        /// Resizes a square image
+        /// </summary>
+        /// <param name="OriginalImage">Image to resize</param>
+        /// <param name="Size">Width and height of new image</param>
+        /// <returns>A scaled version of the image</returns>
+        internal static System.Drawing.Image ResizeImage(System.Drawing.Image OriginalImage, System.Drawing.Size Size)
         {
-            if (format == System.Drawing.Imaging.ImageFormat.Bmp)
-                return "bmp";
-            else if (format == System.Drawing.Imaging.ImageFormat.Jpeg)
-                return "jpg";
-            else if (format == System.Drawing.Imaging.ImageFormat.Icon)
-                return "ico";
-            else if (format == System.Drawing.Imaging.ImageFormat.Png)
-                return "png";
-            return format.ToString();
+            System.Drawing.Image finalImage = new System.Drawing.Bitmap(Size.Width, Size.Height);
+
+            System.Drawing.Graphics graphic = System.Drawing.Graphics.FromImage(finalImage);
+
+            graphic.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighSpeed;
+            graphic.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
+            graphic.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+
+            System.Drawing.Rectangle rectangle = new System.Drawing.Rectangle(0, 0, Size.Width, Size.Height);
+
+            graphic.DrawImage(OriginalImage, rectangle);
+
+            return finalImage;
         }
+
     }
 }

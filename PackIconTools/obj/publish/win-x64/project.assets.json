@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net5.0-windows7.0": {
+    "net6.0-windows7.0": {
       "Caliburn.Micro/4.0.173": {
         "type": "package",
         "dependencies": {
@@ -46,10 +46,64 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
-      "MahApps.Metro/2.4.7": {
+      "Magick.NET-Q16-AnyCPU/11.1.2": {
         "type": "package",
         "dependencies": {
-          "ControlzEx": "4.4.0"
+          "Magick.NET.Core": "11.1.2"
+        },
+        "compile": {
+          "lib/netstandard21/Magick.NET-Q16-AnyCPU.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard21/Magick.NET-Q16-AnyCPU.dll": {}
+        },
+        "build": {
+          "build/netstandard20/Magick.NET-Q16-AnyCPU.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-arm64/native/Magick.Native-Q16-arm64.dll.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux-musl-x64/native/Magick.Native-Q16-x64.dll.so": {
+            "assetType": "native",
+            "rid": "linux-musl-x64"
+          },
+          "runtimes/linux-x64/native/Magick.Native-Q16-x64.dll.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-x64/native/Magick.Native-Q16-x64.dll.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-arm64/native/Magick.Native-Q16-arm64.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/Magick.Native-Q16-x64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/Magick.Native-Q16-x86.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "Magick.NET.Core/11.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard21/Magick.NET.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard21/Magick.NET.Core.dll": {}
+        }
+      },
+      "MahApps.Metro/2.4.9": {
+        "type": "package",
+        "dependencies": {
+          "ControlzEx": "[4.4.0, 6.0.0)"
         },
         "compile": {
           "lib/netcoreapp3.1/MahApps.Metro.dll": {}
@@ -66,73 +120,77 @@
           }
         }
       },
-      "MahApps.Metro.IconPacks/4.8.0": {
+      "MahApps.Metro.IconPacks/4.11.0": {
         "type": "package",
         "compile": {
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.BootstrapIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.BoxIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Codicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Core.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Entypo.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.EvaIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.FeatherIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.FileIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.FontAwesome.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Fontaudio.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.ForkAwesome.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Ionicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.JamIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Material.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.MaterialDesign.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.MaterialLight.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Microns.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Modern.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Octicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.PicolIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.PixelartIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.RPGAwesome.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.RadixIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.RemixIcon.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.SimpleIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Typicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Unicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.VaadinIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.WeatherIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Zondicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.dll": {}
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.BootstrapIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.BoxIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Codicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Coolicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Core.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Entypo.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.EvaIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.FeatherIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.FileIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.FontAwesome.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Fontaudio.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Fontisto.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.ForkAwesome.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Ionicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.JamIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Material.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.MaterialDesign.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.MaterialLight.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Microns.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Modern.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Octicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.PicolIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.PixelartIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.RPGAwesome.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.RadixIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.RemixIcon.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.SimpleIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Typicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Unicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.VaadinIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.WeatherIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Zondicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.dll": {}
         },
         "runtime": {
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.BootstrapIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.BoxIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Codicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Core.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Entypo.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.EvaIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.FeatherIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.FileIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.FontAwesome.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Fontaudio.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.ForkAwesome.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Ionicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.JamIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Material.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.MaterialDesign.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.MaterialLight.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Microns.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Modern.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Octicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.PicolIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.PixelartIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.RPGAwesome.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.RadixIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.RemixIcon.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.SimpleIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Typicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Unicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.VaadinIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.WeatherIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Zondicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.dll": {}
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.BootstrapIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.BoxIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Codicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Coolicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Core.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Entypo.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.EvaIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.FeatherIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.FileIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.FontAwesome.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Fontaudio.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Fontisto.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.ForkAwesome.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Ionicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.JamIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Material.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.MaterialDesign.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.MaterialLight.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Microns.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Modern.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Octicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.PicolIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.PixelartIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.RPGAwesome.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.RadixIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.RemixIcon.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.SimpleIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Typicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Unicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.VaadinIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.WeatherIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Zondicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App.WPF"
@@ -1195,7 +1253,7 @@
       },
       "Seasail/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
+        "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Microsoft.Extensions.DependencyModel": "5.0.0",
           "Newtonsoft.Json": "13.0.1",
@@ -1210,7 +1268,7 @@
         }
       }
     },
-    "net5.0-windows7.0/win-x64": {
+    "net6.0-windows7.0/win-x64": {
       "Caliburn.Micro/4.0.173": {
         "type": "package",
         "dependencies": {
@@ -1255,10 +1313,37 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
-      "MahApps.Metro/2.4.7": {
+      "Magick.NET-Q16-AnyCPU/11.1.2": {
         "type": "package",
         "dependencies": {
-          "ControlzEx": "4.4.0"
+          "Magick.NET.Core": "11.1.2"
+        },
+        "compile": {
+          "lib/netstandard21/Magick.NET-Q16-AnyCPU.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard21/Magick.NET-Q16-AnyCPU.dll": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/Magick.Native-Q16-x64.dll": {}
+        },
+        "build": {
+          "build/netstandard20/Magick.NET-Q16-AnyCPU.targets": {}
+        }
+      },
+      "Magick.NET.Core/11.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard21/Magick.NET.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard21/Magick.NET.Core.dll": {}
+        }
+      },
+      "MahApps.Metro/2.4.9": {
+        "type": "package",
+        "dependencies": {
+          "ControlzEx": "[4.4.0, 6.0.0)"
         },
         "compile": {
           "lib/netcoreapp3.1/MahApps.Metro.dll": {}
@@ -1275,73 +1360,77 @@
           }
         }
       },
-      "MahApps.Metro.IconPacks/4.8.0": {
+      "MahApps.Metro.IconPacks/4.11.0": {
         "type": "package",
         "compile": {
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.BootstrapIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.BoxIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Codicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Core.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Entypo.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.EvaIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.FeatherIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.FileIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.FontAwesome.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Fontaudio.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.ForkAwesome.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Ionicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.JamIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Material.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.MaterialDesign.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.MaterialLight.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Microns.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Modern.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Octicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.PicolIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.PixelartIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.RPGAwesome.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.RadixIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.RemixIcon.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.SimpleIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Typicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Unicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.VaadinIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.WeatherIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Zondicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.dll": {}
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.BootstrapIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.BoxIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Codicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Coolicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Core.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Entypo.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.EvaIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.FeatherIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.FileIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.FontAwesome.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Fontaudio.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Fontisto.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.ForkAwesome.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Ionicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.JamIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Material.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.MaterialDesign.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.MaterialLight.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Microns.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Modern.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Octicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.PicolIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.PixelartIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.RPGAwesome.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.RadixIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.RemixIcon.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.SimpleIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Typicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Unicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.VaadinIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.WeatherIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Zondicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.dll": {}
         },
         "runtime": {
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.BootstrapIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.BoxIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Codicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Core.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Entypo.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.EvaIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.FeatherIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.FileIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.FontAwesome.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Fontaudio.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.ForkAwesome.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Ionicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.JamIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Material.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.MaterialDesign.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.MaterialLight.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Microns.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Modern.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Octicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.PicolIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.PixelartIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.RPGAwesome.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.RadixIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.RemixIcon.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.SimpleIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Typicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Unicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.VaadinIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.WeatherIcons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Zondicons.dll": {},
-          "lib/netcoreapp3.1/MahApps.Metro.IconPacks.dll": {}
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.BootstrapIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.BoxIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Codicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Coolicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Core.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Entypo.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.EvaIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.FeatherIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.FileIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.FontAwesome.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Fontaudio.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Fontisto.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.ForkAwesome.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Ionicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.JamIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Material.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.MaterialDesign.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.MaterialLight.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Microns.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Modern.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Octicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.PicolIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.PixelartIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.RPGAwesome.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.RadixIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.RemixIcon.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.SimpleIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Typicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Unicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.VaadinIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.WeatherIcons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Zondicons.dll": {},
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App.WPF"
@@ -2262,7 +2351,7 @@
       },
       "Seasail/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
+        "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Microsoft.Extensions.DependencyModel": "5.0.0",
           "Newtonsoft.Json": "13.0.1",
@@ -2366,10 +2455,57 @@
         "logo-mini.png"
       ]
     },
-    "MahApps.Metro/2.4.7": {
-      "sha512": "BYCCGRa+/eMDAMYp7TIU0lBIALuc0w1VgddHrAx+PGe2fRkTkoLVDjkcAoAUl1j/mRuX7rup7d8ysjW1BnenIw==",
+    "Magick.NET-Q16-AnyCPU/11.1.2": {
+      "sha512": "yP6Ib72zEivsC0jeE+laBBrxie1dbkfUR/yomtdgsp7y8/rfXpN4P4Nx+TW9mchyDS64pIRl8P5jAzJYmgS3Iw==",
       "type": "package",
-      "path": "mahapps.metro/2.4.7",
+      "path": "magick.net-q16-anycpu/11.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Magick.NET.icon.png",
+        "Notice.linux-musl.txt",
+        "Notice.linux.txt",
+        "Notice.osx.txt",
+        "Notice.win.txt",
+        "build/netstandard20/Magick.NET-Q16-AnyCPU.targets",
+        "lib/netstandard20/Magick.NET-Q16-AnyCPU.dll",
+        "lib/netstandard20/Magick.NET-Q16-AnyCPU.xml",
+        "lib/netstandard21/Magick.NET-Q16-AnyCPU.dll",
+        "lib/netstandard21/Magick.NET-Q16-AnyCPU.xml",
+        "magick.net-q16-anycpu.11.1.2.nupkg.sha512",
+        "magick.net-q16-anycpu.nuspec",
+        "runtimes/linux-arm64/native/Magick.Native-Q16-arm64.dll.so",
+        "runtimes/linux-musl-x64/native/Magick.Native-Q16-x64.dll.so",
+        "runtimes/linux-x64/native/Magick.Native-Q16-x64.dll.so",
+        "runtimes/osx-x64/native/Magick.Native-Q16-x64.dll.dylib",
+        "runtimes/win-arm64/native/Magick.Native-Q16-arm64.dll",
+        "runtimes/win-x64/native/Magick.Native-Q16-x64.dll",
+        "runtimes/win-x86/native/Magick.Native-Q16-x86.dll"
+      ]
+    },
+    "Magick.NET.Core/11.1.2": {
+      "sha512": "fLaj6YKzXtROfgO6YpHG0e9qK0GK2Hh02tTXSHL8wcCJRfihyne9+tztHT9HN+1hyBVDe6NfgRTMxLxuR4fNxw==",
+      "type": "package",
+      "path": "magick.net.core/11.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Copyright.txt",
+        "Magick.NET.icon.png",
+        "lib/net20/Magick.NET.Core.dll",
+        "lib/net20/Magick.NET.Core.xml",
+        "lib/netstandard20/Magick.NET.Core.dll",
+        "lib/netstandard20/Magick.NET.Core.xml",
+        "lib/netstandard21/Magick.NET.Core.dll",
+        "lib/netstandard21/Magick.NET.Core.xml",
+        "magick.net.core.11.1.2.nupkg.sha512",
+        "magick.net.core.nuspec"
+      ]
+    },
+    "MahApps.Metro/2.4.9": {
+      "sha512": "eMTkg6TBnCwHzszw7CP+pxsBeB4ZMsJFiTJJoifUVBysRyEenzzR+TKQJuMvvKK6KzvLxwHmJsFhi9o5p4vxhQ==",
+      "type": "package",
+      "path": "mahapps.metro/2.4.9",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -2394,16 +2530,16 @@
         "lib/netcoreapp3.1/MahApps.Metro.pdb",
         "lib/netcoreapp3.1/MahApps.Metro.xml",
         "lib/netcoreapp3.1/de/MahApps.Metro.resources.dll",
-        "mahapps.metro.2.4.7.nupkg.sha512",
+        "mahapps.metro.2.4.9.nupkg.sha512",
         "mahapps.metro.logo.png",
         "mahapps.metro.nuspec",
         "tools/VisualStudioToolsManifest.xml"
       ]
     },
-    "MahApps.Metro.IconPacks/4.8.0": {
-      "sha512": "G00GRXwBOzEIryBKOzbKH01SUUGMYKkIg3GQe0G/d1oZoRUJAeWN0Iw+WTs8ARU0CHzzvMAV00Z5y1mCB4pUPg==",
+    "MahApps.Metro.IconPacks/4.11.0": {
+      "sha512": "hanveh4ZZLYZ00ONrwjyzDJnekxWcgFQ7rHHrmC7GppO3js3tAEhmW+lo0rNgG4naxkggEYZFLeH+rxeJLMSuQ==",
       "type": "package",
-      "path": "mahapps.metro.iconpacks/4.8.0",
+      "path": "mahapps.metro.iconpacks/4.11.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2416,6 +2552,9 @@
         "lib/net45/MahApps.Metro.IconPacks.Codicons.dll",
         "lib/net45/MahApps.Metro.IconPacks.Codicons.pdb",
         "lib/net45/MahApps.Metro.IconPacks.Codicons.xml",
+        "lib/net45/MahApps.Metro.IconPacks.Coolicons.dll",
+        "lib/net45/MahApps.Metro.IconPacks.Coolicons.pdb",
+        "lib/net45/MahApps.Metro.IconPacks.Coolicons.xml",
         "lib/net45/MahApps.Metro.IconPacks.Core.dll",
         "lib/net45/MahApps.Metro.IconPacks.Core.pdb",
         "lib/net45/MahApps.Metro.IconPacks.Core.xml",
@@ -2437,6 +2576,9 @@
         "lib/net45/MahApps.Metro.IconPacks.Fontaudio.dll",
         "lib/net45/MahApps.Metro.IconPacks.Fontaudio.pdb",
         "lib/net45/MahApps.Metro.IconPacks.Fontaudio.xml",
+        "lib/net45/MahApps.Metro.IconPacks.Fontisto.dll",
+        "lib/net45/MahApps.Metro.IconPacks.Fontisto.pdb",
+        "lib/net45/MahApps.Metro.IconPacks.Fontisto.xml",
         "lib/net45/MahApps.Metro.IconPacks.ForkAwesome.dll",
         "lib/net45/MahApps.Metro.IconPacks.ForkAwesome.pdb",
         "lib/net45/MahApps.Metro.IconPacks.ForkAwesome.xml",
@@ -2509,6 +2651,9 @@
         "lib/net46/MahApps.Metro.IconPacks.Codicons.dll",
         "lib/net46/MahApps.Metro.IconPacks.Codicons.pdb",
         "lib/net46/MahApps.Metro.IconPacks.Codicons.xml",
+        "lib/net46/MahApps.Metro.IconPacks.Coolicons.dll",
+        "lib/net46/MahApps.Metro.IconPacks.Coolicons.pdb",
+        "lib/net46/MahApps.Metro.IconPacks.Coolicons.xml",
         "lib/net46/MahApps.Metro.IconPacks.Core.dll",
         "lib/net46/MahApps.Metro.IconPacks.Core.pdb",
         "lib/net46/MahApps.Metro.IconPacks.Core.xml",
@@ -2530,6 +2675,9 @@
         "lib/net46/MahApps.Metro.IconPacks.Fontaudio.dll",
         "lib/net46/MahApps.Metro.IconPacks.Fontaudio.pdb",
         "lib/net46/MahApps.Metro.IconPacks.Fontaudio.xml",
+        "lib/net46/MahApps.Metro.IconPacks.Fontisto.dll",
+        "lib/net46/MahApps.Metro.IconPacks.Fontisto.pdb",
+        "lib/net46/MahApps.Metro.IconPacks.Fontisto.xml",
         "lib/net46/MahApps.Metro.IconPacks.ForkAwesome.dll",
         "lib/net46/MahApps.Metro.IconPacks.ForkAwesome.pdb",
         "lib/net46/MahApps.Metro.IconPacks.ForkAwesome.xml",
@@ -2602,6 +2750,9 @@
         "lib/net47/MahApps.Metro.IconPacks.Codicons.dll",
         "lib/net47/MahApps.Metro.IconPacks.Codicons.pdb",
         "lib/net47/MahApps.Metro.IconPacks.Codicons.xml",
+        "lib/net47/MahApps.Metro.IconPacks.Coolicons.dll",
+        "lib/net47/MahApps.Metro.IconPacks.Coolicons.pdb",
+        "lib/net47/MahApps.Metro.IconPacks.Coolicons.xml",
         "lib/net47/MahApps.Metro.IconPacks.Core.dll",
         "lib/net47/MahApps.Metro.IconPacks.Core.pdb",
         "lib/net47/MahApps.Metro.IconPacks.Core.xml",
@@ -2623,6 +2774,9 @@
         "lib/net47/MahApps.Metro.IconPacks.Fontaudio.dll",
         "lib/net47/MahApps.Metro.IconPacks.Fontaudio.pdb",
         "lib/net47/MahApps.Metro.IconPacks.Fontaudio.xml",
+        "lib/net47/MahApps.Metro.IconPacks.Fontisto.dll",
+        "lib/net47/MahApps.Metro.IconPacks.Fontisto.pdb",
+        "lib/net47/MahApps.Metro.IconPacks.Fontisto.xml",
         "lib/net47/MahApps.Metro.IconPacks.ForkAwesome.dll",
         "lib/net47/MahApps.Metro.IconPacks.ForkAwesome.pdb",
         "lib/net47/MahApps.Metro.IconPacks.ForkAwesome.xml",
@@ -2686,6 +2840,105 @@
         "lib/net47/MahApps.Metro.IconPacks.dll",
         "lib/net47/MahApps.Metro.IconPacks.pdb",
         "lib/net47/MahApps.Metro.IconPacks.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.BootstrapIcons.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.BootstrapIcons.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.BootstrapIcons.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.BoxIcons.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.BoxIcons.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.BoxIcons.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Codicons.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Codicons.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Codicons.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Coolicons.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Coolicons.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Coolicons.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Core.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Core.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Core.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Entypo.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Entypo.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Entypo.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.EvaIcons.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.EvaIcons.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.EvaIcons.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.FeatherIcons.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.FeatherIcons.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.FeatherIcons.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.FileIcons.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.FileIcons.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.FileIcons.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.FontAwesome.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.FontAwesome.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.FontAwesome.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Fontaudio.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Fontaudio.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Fontaudio.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Fontisto.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Fontisto.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Fontisto.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.ForkAwesome.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.ForkAwesome.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.ForkAwesome.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Ionicons.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Ionicons.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Ionicons.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.JamIcons.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.JamIcons.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.JamIcons.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Material.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Material.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Material.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.MaterialDesign.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.MaterialDesign.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.MaterialDesign.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.MaterialLight.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.MaterialLight.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.MaterialLight.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Microns.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Microns.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Microns.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Modern.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Modern.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Modern.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Octicons.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Octicons.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Octicons.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.PicolIcons.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.PicolIcons.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.PicolIcons.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.PixelartIcons.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.PixelartIcons.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.PixelartIcons.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.RPGAwesome.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.RPGAwesome.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.RPGAwesome.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.RadixIcons.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.RadixIcons.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.RadixIcons.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.RemixIcon.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.RemixIcon.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.RemixIcon.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.SimpleIcons.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.SimpleIcons.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.SimpleIcons.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Typicons.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Typicons.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Typicons.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Unicons.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Unicons.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Unicons.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.VaadinIcons.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.VaadinIcons.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.VaadinIcons.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.WeatherIcons.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.WeatherIcons.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.WeatherIcons.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Zondicons.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Zondicons.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Zondicons.xml",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.dll",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.pdb",
+        "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.xml",
         "lib/netcoreapp3.0/MahApps.Metro.IconPacks.BootstrapIcons.dll",
         "lib/netcoreapp3.0/MahApps.Metro.IconPacks.BootstrapIcons.pdb",
         "lib/netcoreapp3.0/MahApps.Metro.IconPacks.BootstrapIcons.xml",
@@ -2695,6 +2948,9 @@
         "lib/netcoreapp3.0/MahApps.Metro.IconPacks.Codicons.dll",
         "lib/netcoreapp3.0/MahApps.Metro.IconPacks.Codicons.pdb",
         "lib/netcoreapp3.0/MahApps.Metro.IconPacks.Codicons.xml",
+        "lib/netcoreapp3.0/MahApps.Metro.IconPacks.Coolicons.dll",
+        "lib/netcoreapp3.0/MahApps.Metro.IconPacks.Coolicons.pdb",
+        "lib/netcoreapp3.0/MahApps.Metro.IconPacks.Coolicons.xml",
         "lib/netcoreapp3.0/MahApps.Metro.IconPacks.Core.dll",
         "lib/netcoreapp3.0/MahApps.Metro.IconPacks.Core.pdb",
         "lib/netcoreapp3.0/MahApps.Metro.IconPacks.Core.xml",
@@ -2716,6 +2972,9 @@
         "lib/netcoreapp3.0/MahApps.Metro.IconPacks.Fontaudio.dll",
         "lib/netcoreapp3.0/MahApps.Metro.IconPacks.Fontaudio.pdb",
         "lib/netcoreapp3.0/MahApps.Metro.IconPacks.Fontaudio.xml",
+        "lib/netcoreapp3.0/MahApps.Metro.IconPacks.Fontisto.dll",
+        "lib/netcoreapp3.0/MahApps.Metro.IconPacks.Fontisto.pdb",
+        "lib/netcoreapp3.0/MahApps.Metro.IconPacks.Fontisto.xml",
         "lib/netcoreapp3.0/MahApps.Metro.IconPacks.ForkAwesome.dll",
         "lib/netcoreapp3.0/MahApps.Metro.IconPacks.ForkAwesome.pdb",
         "lib/netcoreapp3.0/MahApps.Metro.IconPacks.ForkAwesome.xml",
@@ -2788,6 +3047,9 @@
         "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Codicons.dll",
         "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Codicons.pdb",
         "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Codicons.xml",
+        "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Coolicons.dll",
+        "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Coolicons.pdb",
+        "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Coolicons.xml",
         "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Core.dll",
         "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Core.pdb",
         "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Core.xml",
@@ -2809,6 +3071,9 @@
         "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Fontaudio.dll",
         "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Fontaudio.pdb",
         "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Fontaudio.xml",
+        "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Fontisto.dll",
+        "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Fontisto.pdb",
+        "lib/netcoreapp3.1/MahApps.Metro.IconPacks.Fontisto.xml",
         "lib/netcoreapp3.1/MahApps.Metro.IconPacks.ForkAwesome.dll",
         "lib/netcoreapp3.1/MahApps.Metro.IconPacks.ForkAwesome.pdb",
         "lib/netcoreapp3.1/MahApps.Metro.IconPacks.ForkAwesome.xml",
@@ -2893,6 +3158,13 @@
         "lib/uap10.0.16299/MahApps.Metro.IconPacks.Codicons/MahApps.Metro.IconPacks.Codicons.xr.xml",
         "lib/uap10.0.16299/MahApps.Metro.IconPacks.Codicons/Themes/Generic.xaml",
         "lib/uap10.0.16299/MahApps.Metro.IconPacks.Codicons/Themes/PackIconCodicons.xaml",
+        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Coolicons.dll",
+        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Coolicons.pdb",
+        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Coolicons.pri",
+        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Coolicons.xml",
+        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Coolicons/MahApps.Metro.IconPacks.Coolicons.xr.xml",
+        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Coolicons/Themes/Generic.xaml",
+        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Coolicons/Themes/PackIconCoolicons.xaml",
         "lib/uap10.0.16299/MahApps.Metro.IconPacks.Core.dll",
         "lib/uap10.0.16299/MahApps.Metro.IconPacks.Core.pdb",
         "lib/uap10.0.16299/MahApps.Metro.IconPacks.Core.pri",
@@ -2939,6 +3211,13 @@
         "lib/uap10.0.16299/MahApps.Metro.IconPacks.Fontaudio/MahApps.Metro.IconPacks.Fontaudio.xr.xml",
         "lib/uap10.0.16299/MahApps.Metro.IconPacks.Fontaudio/Themes/Generic.xaml",
         "lib/uap10.0.16299/MahApps.Metro.IconPacks.Fontaudio/Themes/PackIconFontaudio.xaml",
+        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Fontisto.dll",
+        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Fontisto.pdb",
+        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Fontisto.pri",
+        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Fontisto.xml",
+        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Fontisto/MahApps.Metro.IconPacks.Fontisto.xr.xml",
+        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Fontisto/Themes/Generic.xaml",
+        "lib/uap10.0.16299/MahApps.Metro.IconPacks.Fontisto/Themes/PackIconFontisto.xaml",
         "lib/uap10.0.16299/MahApps.Metro.IconPacks.ForkAwesome.dll",
         "lib/uap10.0.16299/MahApps.Metro.IconPacks.ForkAwesome.pdb",
         "lib/uap10.0.16299/MahApps.Metro.IconPacks.ForkAwesome.pri",
@@ -3085,7 +3364,7 @@
         "lib/uap10.0.16299/MahApps.Metro.IconPacks.xml",
         "lib/uap10.0.16299/MahApps.Metro.IconPacks/MahApps.Metro.IconPacks.xr.xml",
         "logo_small.png",
-        "mahapps.metro.iconpacks.4.8.0.nupkg.sha512",
+        "mahapps.metro.iconpacks.4.11.0.nupkg.sha512",
         "mahapps.metro.iconpacks.nuspec"
       ]
     },
@@ -6082,10 +6361,12 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net5.0-windows7.0": [
+    "net6.0-windows7.0": [
       "Caliburn.Micro >= 4.0.173",
-      "MahApps.Metro >= 2.4.7",
-      "MahApps.Metro.IconPacks >= 4.8.0",
+      "Magick.NET-Q16-AnyCPU >= 11.1.2",
+      "Magick.NET.Core >= 11.1.2",
+      "MahApps.Metro >= 2.4.9",
+      "MahApps.Metro.IconPacks >= 4.11.0",
       "Seasail >= 1.0.0"
     ]
   },
@@ -6096,11 +6377,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Seasail\\github\\PackIconTools\\PackIconTools\\PackIconTools.csproj",
+      "projectUniqueName": "D:\\Seasail\\PackIconTools\\PackIconTools\\PackIconTools.csproj",
       "projectName": "PackIconTools",
-      "projectPath": "G:\\Seasail\\github\\PackIconTools\\PackIconTools\\PackIconTools.csproj",
+      "projectPath": "D:\\Seasail\\PackIconTools\\PackIconTools\\PackIconTools.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "G:\\Seasail\\github\\PackIconTools\\PackIconTools\\obj\\publish\\win-x64\\",
+      "outputPath": "D:\\Seasail\\PackIconTools\\PackIconTools\\obj\\publish\\win-x64\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6111,18 +6392,18 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0-windows"
+        "net6.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net5.0-windows7.0": {
-          "targetAlias": "net5.0-windows",
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "G:\\Seasail\\github\\PackIconTools\\Seasail\\Seasail.csproj": {
-              "projectPath": "G:\\Seasail\\github\\PackIconTools\\Seasail\\Seasail.csproj"
+            "D:\\Seasail\\PackIconTools\\Seasail\\Seasail.csproj": {
+              "projectPath": "D:\\Seasail\\PackIconTools\\Seasail\\Seasail.csproj"
             }
           }
         }
@@ -6134,20 +6415,28 @@
       }
     },
     "frameworks": {
-      "net5.0-windows7.0": {
-        "targetAlias": "net5.0-windows",
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
         "dependencies": {
           "Caliburn.Micro": {
             "target": "Package",
             "version": "[4.0.173, )"
           },
+          "Magick.NET-Q16-AnyCPU": {
+            "target": "Package",
+            "version": "[11.1.2, )"
+          },
+          "Magick.NET.Core": {
+            "target": "Package",
+            "version": "[11.1.2, )"
+          },
           "MahApps.Metro": {
             "target": "Package",
-            "version": "[2.4.7, )"
+            "version": "[2.4.9, )"
           },
           "MahApps.Metro.IconPacks": {
             "target": "Package",
-            "version": "[4.8.0, )"
+            "version": "[4.11.0, )"
           }
         },
         "imports": [
@@ -6163,15 +6452,15 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[5.0.12, 5.0.12]"
+            "version": "[6.0.5, 6.0.5]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x64",
-            "version": "[5.0.12, 5.0.12]"
+            "version": "[6.0.5, 6.0.5]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-            "version": "[5.0.12, 5.0.12]"
+            "version": "[6.0.5, 6.0.5]"
           }
         ],
         "frameworkReferences": {
@@ -6182,7 +6471,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

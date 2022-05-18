@@ -9,90 +9,52 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="{Binding DisplayName}"
     Width="1024"
-    Icon="{icons:MaterialImage Kind=AlphaSCircle, Brush=White}"
     Height="768"
+    TitleBarHeight="50"
     mc:Ignorable="d">
+    <mah:MetroWindow.IconTemplate>
+        <DataTemplate>
+            <Image
+                Width="35"
+                Height="35"
+                Source="{icons:MicronsImage Kind=Image,
+                                            Brush=White}" />
+        </DataTemplate>
+    </mah:MetroWindow.IconTemplate>
+    <mah:MetroWindow.TitleTemplate>
+        <DataTemplate>
+            <TextBlock VerticalAlignment="Center">
+                <Run
+                    FontSize="20"
+                    FontWeight="Light"
+                    Foreground="Orange"
+                    Text="Mahapps" />
+                <Run
+                    FontSize="16"
+                    FontWeight="Black"
+                    Foreground="White"
+                    Text="Iconpacks" />
+                <Run
+                    FontSize="20"
+                    FontWeight="Black"
+                    Foreground="Purple"
+                    Text="Tools" />
+            </TextBlock>
+        </DataTemplate>
+    </mah:MetroWindow.TitleTemplate>
+    <mah:MetroWindow.Resources>
+        <Style TargetType="GroupBox" />
+    </mah:MetroWindow.Resources>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <ToolBarTray Margin="10">
-            <ToolBar BandIndex="1">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock
-                        Margin="3"
-                        VerticalAlignment="Center"
-                        Text="{DynamicResource s_SavePath}" />
-                    <TextBox Margin="3" Text="{Binding SavePath}"  VerticalAlignment="Center" Width="200"/>
-                    <Button
-                        Width="35"
-                        Margin="3"
-                        Command="{Binding SelectSavePathCommand}"
-                        Style="{StaticResource MahApps.Styles.Button}">
-                        <TextBlock Text="..."/>
-                    </Button>
-                </StackPanel>
-            </ToolBar>
-            <ToolBar BandIndex="1">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock
-                        Margin="3"
-                        VerticalAlignment="Center"
-                        Text="{DynamicResource s_Brush}" />
-                    <mah:ColorPicker Margin="3" SelectedColor="{Binding SelectedColor}" />
-                </StackPanel>
-            </ToolBar>
-            <ToolBar BandIndex="2">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock
-                        Margin="3"
-                        VerticalAlignment="Center"
-                        Text="{DynamicResource s_OutputFormat}" />
-                    <ComboBox
-                        Width="100"
-                        Margin="3"
-                        ItemsSource="{Binding OutputFormats}"
-                        SelectedItem="{Binding OutputFormat}" />
-                </StackPanel>
-            </ToolBar>
-            <ToolBar BandIndex="3">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock
-                        Margin="3"
-                        VerticalAlignment="Center"
-                        Text="{DynamicResource s_Size}" />
-                    <ComboBox
-                        Width="100"
-                        Margin="3"
-                        ItemsSource="{Binding Sizes}"
-                        SelectedItem="{Binding Size}" />
-                </StackPanel>
-            </ToolBar>
-            <ToolBar BandIndex="4">
-                <StackPanel Orientation="Horizontal">
-                    <Button Command="{Binding GenerateCommand}" Style="{DynamicResource MahApps.Styles.Button.Calendar.Header}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="{icons:MaterialImage Kind=Export, Brush=Green}" />
-                            <TextBlock
-                                Margin="3"
-                                VerticalAlignment="Center"
-                                Foreground="Black"
-                                Text="{DynamicResource s_Generate}" />
-                        </StackPanel>
-                    </Button>
-                </StackPanel>
-            </ToolBar>
-        </ToolBarTray>
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="300" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="200" />
+            <ColumnDefinition Width="Auto" MinWidth="250" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="Assembly">
             <ListBox
                 Grid.Row="1"
-                Margin="5"
-                BorderThickness="1"
+                Margin="0,5"
                 ItemsSource="{Binding Assemblies}"
                 SelectedItem="{Binding CurrentAssembly}">
                 <ListBox.ItemTemplate>
@@ -104,46 +66,115 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <Grid Grid.Column="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
+        </GroupBox>
 
-                <Border
+        <GroupBox Grid.Column="1" Header="Kinds">
+            <ListBox
+                Margin="10"
+                ItemsSource="{Binding CurrentAssembly.Kinds}"
+                SelectedItem="{Binding CurrentKind}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock
+                                Width="30"
+                                VerticalAlignment="Center"
+                                Text="{Binding Index}" />
+                            <!--<Viewbox Width="24" Height="24" Grid.Column="1" Margin="20,3">
+                                    <Canvas Width="24" Height="24">
+                                        <Path Fill="Black" Data="{Binding PathData}" />
+                                    </Canvas>
+                                </Viewbox>-->
+                            <Image
+                                Grid.Column="1"
+                                Width="20"
+                                Height="20"
+                                Margin="20,3"
+                                Source="{Binding ImageSource}" />
+                            <TextBlock
+                                Grid.Column="2"
+                                Margin="3"
+                                VerticalAlignment="Center"
+                                Text="{Binding KindName}" />
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="1" />
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
+        </GroupBox>
+
+        <GroupBox Grid.Column="2" Header="Details">
+            <StackPanel>
+                <TextBlock
+                    Margin="3,10,3,3"
+                    VerticalAlignment="Center"
+                    Text="Name:" />
+                <TextBox
+                    Grid.Column="1"
+                    IsReadOnly="True"
+                    Text="{Binding CurrentKind.KindName}" />
+                <TextBlock
                     Grid.Row="1"
-                    Margin="10"
+                    Margin="3,10,3,3"
+                    Text="Path Data:" />
+                <TextBox
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Height="350"
+                    Margin="0,5"
                     BorderBrush="LightGray"
                     BorderThickness="1"
-                    CornerRadius="10">
-                    <ListBox
-                        Margin="10"
-                        ItemsSource="{Binding CurrentAssembly.Kinds}"
-                        SelectedItem="{Binding CurrentKind}">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    <Image
-                                        Width="20"
-                                        Height="20"
-                                        Margin="3"
-                                        Source="{Binding ImageSource}" />
-                                    <!--<ContentControl Content="{Binding ImageSource}"/>-->
-                                    <TextBlock
-                                        Margin="3"
-                                        VerticalAlignment="Center"
-                                        Text="{Binding KindName}" />
-                                </StackPanel>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                        <ListBox.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <UniformGrid Columns="5" />
-                            </ItemsPanelTemplate>
-                        </ListBox.ItemsPanel>
-                    </ListBox>
-                </Border>
-            </Grid>
-        </Grid>
+                    IsReadOnly="True"
+                    Text="{Binding CurrentKind.PathData}"
+                    TextWrapping="Wrap" />
+                <TextBlock
+                    Margin="3"
+                    VerticalAlignment="Center"
+                    Text="{DynamicResource s_Brush}" />
+                <mah:ColorPicker Margin="3" SelectedColor="{Binding SelectedColor}" />
+                <TextBlock
+                    Margin="3"
+                    VerticalAlignment="Center"
+                    Text="{DynamicResource s_Size}" />
+                <ComboBox
+                    Margin="3"
+                    ItemsSource="{Binding Sizes}"
+                    SelectedItem="{Binding Size}" />
+                <UniformGrid Margin="0,10" Rows="1">
+                    <Button
+                        Margin="5,3"
+                        Command="{Binding GenerateCommand}"
+                        Style="{StaticResource MahApps.Styles.Button.Calendar.Header}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="{icons:MaterialImage Kind=ContentCopy, Brush=Black}" />
+                            <TextBlock
+                                Margin="3"
+                                VerticalAlignment="Center"
+                                Foreground="Black"
+                                Text="{DynamicResource s_CopyToClipboard}" />
+                        </StackPanel>
+                    </Button>
+                    <Button Command="{Binding GenerateCommand}" Style="{StaticResource MahApps.Styles.Button.Calendar.Header}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Margin="5,3" Source="{icons:MaterialImage Kind=Export, Brush=Black}" />
+                            <TextBlock
+                                Margin="3"
+                                VerticalAlignment="Center"
+                                Foreground="Black"
+                                Text="{DynamicResource s_Generate}" />
+                        </StackPanel>
+                    </Button>
+                </UniformGrid>
+            </StackPanel>
+        </GroupBox>
     </Grid>
 </mah:MetroWindow>

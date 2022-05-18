@@ -9,5 +9,6 @@
     <s:String x:Key="s_Generate">Generate</s:String>
     <s:String x:Key="s_Size">Size</s:String>
     <s:String x:Key="s_SavePath">Save Path</s:String>
-    
+    <s:String x:Key="s_CopyToClipboard">Copy PathData to clipboard</s:String>
+
 </ResourceDictionary>

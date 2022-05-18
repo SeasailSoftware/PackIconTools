@@ -31,11 +31,12 @@ namespace PackIconTools.Models
             if (t == null) return;
             var instance = Activator.CreateInstance(t);
             var values = Enum.GetValues(t);
+            var index = 1;
             foreach (var item in values)
             {
 
                 //var kindType = $"MahApps.Metro.IconPacks.{items[3]}.{item}";
-                Kinds.Add(new KindModel(_assembly,TypeName, item));
+                Kinds.Add(new KindModel(index++, _assembly, TypeName, item));
             }
         }
 

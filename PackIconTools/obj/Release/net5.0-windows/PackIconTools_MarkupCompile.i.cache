@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-G:\Seasail\github\PackIconTools\PackIconTools\obj\Release\net5.0-windows\
+D:\Seasail\PackIconTools\PackIconTools\obj\Release\net5.0-windows\
 PackIconTools
 none
 false
 TRACE;RELEASE;NET;NET5_0;NETCOREAPP
-G:\Seasail\github\PackIconTools\PackIconTools\App.xaml
+D:\Seasail\PackIconTools\PackIconTools\App.xaml
 5-364121015
 
 15-1852506819
-26147059061
+2591046615302
 i18N\en-US.xaml;i18N\zh-CN.xaml;Resources\Converters.xaml;Resources\Style.xaml;Views\ShellView.xaml;
 
 True

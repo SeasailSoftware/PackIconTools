@@ -27,24 +27,29 @@ namespace PackIconTools.ViewModels
 
         public Options Options => IoC.Get<Options>();
 
-        protected override Task OnActivateAsync(CancellationToken cancellationToken)
+        protected override async Task OnActivateAsync(CancellationToken cancellationToken)
         {
-            LoadAssemblies();
-            return base.OnActivateAsync(cancellationToken);
+            await base.OnActivateAsync(cancellationToken);
+            await LoadAssemblies();
         }
 
-        private void LoadAssemblies()
+        private Task LoadAssemblies()
         {
-
-            foreach (var filePath in Directory.GetFileSystemEntries(AppDomain.CurrentDomain.BaseDirectory))
+            return Task.Run(() =>
             {
-                var file = new FileInfo(filePath);
-                if (file.Name.StartsWith("MahApps.Metro"))
+                foreach (var filePath in Directory.GetFileSystemEntries(AppDomain.CurrentDomain.BaseDirectory))
                 {
-                    var assembly = Assembly.LoadFrom(filePath);
-                    Assemblies.Add(new AssemblyModel(assembly));
+                    var file = new FileInfo(filePath);
+                    if (file.Name.StartsWith("MahApps.Metro"))
+                    {
+                        var assembly = Assembly.LoadFrom(filePath);
+                        App.Current.Dispatcher.Invoke(new System.Action(() =>
+                        {
+                            Assemblies.Add(new AssemblyModel(assembly));
+                        }));
+                    }
                 }
-            }
+            });
         }
 
         public ObservableCollection<AssemblyModel> Assemblies { get; set; } = new ObservableCollection<AssemblyModel>();
@@ -72,15 +77,7 @@ namespace PackIconTools.ViewModels
             }
         }
 
-        public string SavePath
-        {
-            get => Options.SavePath;
-            set
-            {
-                Options.SavePath = value;
-                NotifyOfPropertyChange(() => SavePath);
-            }
-        }
+
 
         public System.Drawing.Imaging.ImageFormat[] OutputFormats => new System.Drawing.Imaging.ImageFormat[]
         {
@@ -122,46 +119,27 @@ namespace PackIconTools.ViewModels
             }
         }
 
-        public RelayCommand SelectSavePathCommand => new RelayCommand(x=>
-        {
-            using (FolderBrowserDialog openFileDialog = new FolderBrowserDialog())  //选择文件夹
-            {
-                if (openFileDialog.ShowDialog() == DialogResult.OK)//注意，此处一定要手动引入System.Window.Forms空间，否则你如果使用默认的DialogResult会发现没有OK属性
-                {
-                    SavePath = openFileDialog.SelectedPath;
-                }
-            }
-        });
 
 
         public RelayCommand GenerateCommand => new RelayCommand(x =>
         {
-            var brush = new SolidColorBrush(SelectedColor);
-            var width = Convert.ToInt32(Size.Split(" ")[0]);
-            var imageSource = MahAppsPackIconHelper.CreateImageSource(CurrentKind.Kind, brush);
-            var image = (imageSource as DrawingImage).ToBitmap(width, width);
-            if (image != null)
+            var dlg = new SaveFileDialog() { Filter = "Bmp File (*.bmp)|*.bmp|Png File(*.png)|*.png|Jpeg File(*.jpg)|*.jpg|Icon File(*.ico)|*.ico" };
+            if (dlg.ShowDialog() == DialogResult.OK)
             {
-                var fileName = $@"{SavePath}/{Guid.NewGuid()}.{OutputFormat.ImageSuffix()}";
-                if(OutputFormat == System.Drawing.Imaging.ImageFormat.Icon)
+                var brush = new SolidColorBrush(SelectedColor);
+                var width = Convert.ToInt32(Size.Split(" ")[0]);
+                var imageSource = MahAppsPackIconHelper.CreateImageSource(CurrentKind.Kind, brush);
+
+                var image = (imageSource as DrawingImage).ToBitmap(width, width);
+                if (image != null)
                 {
-                    using (System.Drawing.Bitmap iconBm = new System.Drawing.Bitmap(image))
-                    {
-                        using (System.Drawing.Icon icon = System.Drawing.Icon.FromHandle(iconBm.GetHicon()))
-                        {
-                            using (var stream = new FileStream(fileName, FileMode.Create))
-                            {
-                                icon.Save(stream);
-                            }
-                        }
-                    }
-                }
-                else
-                {
-                    image.Save($@"{SavePath}/{Guid.NewGuid()}.{OutputFormat.ImageSuffix()}", OutputFormat);
+                    //image.Save(dlg.FileName);
+                    //IconGenerator.ConvertImageToIcon(dlg.FileName, new System.Drawing.Size(64, 64));
+                    var fileName = dlg.FileName;
+                    IconGenerator.Save(image, dlg.FileName, new System.Drawing.Size(width, width));
                 }
             }
 
-        }, y => CurrentKind != null && OutputFormat != null && !string.IsNullOrEmpty(Size) && !string.IsNullOrEmpty(SavePath));
+        }, y => CurrentKind != null);
     }
 }

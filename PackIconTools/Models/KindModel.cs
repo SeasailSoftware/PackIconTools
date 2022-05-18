@@ -17,16 +17,48 @@ namespace PackIconTools.Models
         private string _kindName;
         public object Kind { get; private set; }
 
-        public KindModel(Assembly value, string typeName, object kind)
+        public KindModel(int index, Assembly value, string typeName, object kind)
         {
+            _index = index;
             this._assembly = value;
             Type = _assembly.GetType($"MahApps.Metro.IconPacks.PackIcon{typeName}");
             this._kindName = kind.ToString();
             Kind = kind;
             _imageSource = MahAppsPackIconHelper.CreateImageSource(kind, Brushes.Black);
+            _pathData = MahAppsPackIconHelper.GetPathData(kind);
         }
 
-        public string KindName => _kindName;
+        private string _pathData;
+        public string PathData
+        {
+            get => _pathData;
+            set
+            {
+                _pathData = value;
+                NotifyOfPropertyChange(() => PathData);
+            }
+        }
+
+        private int _index;
+        public int Index
+        {
+            get => _index;
+            set
+            {
+                _index = value;
+                NotifyOfPropertyChange(() => Index);
+            }
+        }
+
+        public string KindName
+        {
+            get => _kindName;
+            set
+            {
+                _kindName = value;
+                NotifyOfPropertyChange(() => KindName);
+            }
+        }
 
         private ImageSource _imageSource;
 

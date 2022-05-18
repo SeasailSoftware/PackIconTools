@@ -1,0 +1,15 @@
+D:\Seasail\PackIconTools\Seasail\bin\Release\net6.0\Seasail.dll.config
+D:\Seasail\PackIconTools\Seasail\bin\Release\net6.0\Seasail.deps.json
+D:\Seasail\PackIconTools\Seasail\bin\Release\net6.0\Seasail.dll
+D:\Seasail\PackIconTools\Seasail\bin\Release\net6.0\Seasail.pdb
+D:\Seasail\PackIconTools\Seasail\obj\Release\net6.0\Seasail.csproj.AssemblyReference.cache
+D:\Seasail\PackIconTools\Seasail\obj\Release\net6.0\Seasail.Properties.Resources.resources
+D:\Seasail\PackIconTools\Seasail\obj\Release\net6.0\Seasail.csproj.GenerateResource.cache
+D:\Seasail\PackIconTools\Seasail\obj\Release\net6.0\Seasail.GeneratedMSBuildEditorConfig.editorconfig
+D:\Seasail\PackIconTools\Seasail\obj\Release\net6.0\Seasail.AssemblyInfoInputs.cache
+D:\Seasail\PackIconTools\Seasail\obj\Release\net6.0\Seasail.AssemblyInfo.cs
+D:\Seasail\PackIconTools\Seasail\obj\Release\net6.0\Seasail.csproj.CoreCompileInputs.cache
+D:\Seasail\PackIconTools\Seasail\obj\Release\net6.0\Seasail.dll
+D:\Seasail\PackIconTools\Seasail\obj\Release\net6.0\refint\Seasail.dll
+D:\Seasail\PackIconTools\Seasail\obj\Release\net6.0\Seasail.pdb
+D:\Seasail\PackIconTools\Seasail\obj\Release\net6.0\ref\Seasail.dll

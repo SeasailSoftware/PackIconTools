@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Seasail\\github\\PackIconTools\\PackIconTools\\PackIconTools.csproj": {}
+    "D:\\Seasail\\PackIconTools\\PackIconTools\\PackIconTools.csproj": {}
   },
   "projects": {
-    "G:\\Seasail\\github\\PackIconTools\\PackIconTools\\PackIconTools.csproj": {
+    "D:\\Seasail\\PackIconTools\\PackIconTools\\PackIconTools.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Seasail\\github\\PackIconTools\\PackIconTools\\PackIconTools.csproj",
+        "projectUniqueName": "D:\\Seasail\\PackIconTools\\PackIconTools\\PackIconTools.csproj",
         "projectName": "PackIconTools",
-        "projectPath": "G:\\Seasail\\github\\PackIconTools\\PackIconTools\\PackIconTools.csproj",
+        "projectPath": "D:\\Seasail\\PackIconTools\\PackIconTools\\PackIconTools.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "G:\\Seasail\\github\\PackIconTools\\PackIconTools\\obj\\publish\\win-x64\\",
+        "outputPath": "D:\\Seasail\\PackIconTools\\PackIconTools\\obj\\publish\\win-x64\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,18 +22,18 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0-windows"
+          "net6.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0-windows7.0": {
-            "targetAlias": "net5.0-windows",
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "G:\\Seasail\\github\\PackIconTools\\Seasail\\Seasail.csproj": {
-                "projectPath": "G:\\Seasail\\github\\PackIconTools\\Seasail\\Seasail.csproj"
+              "D:\\Seasail\\PackIconTools\\Seasail\\Seasail.csproj": {
+                "projectPath": "D:\\Seasail\\PackIconTools\\Seasail\\Seasail.csproj"
               }
             }
           }
@@ -45,20 +45,28 @@
         }
       },
       "frameworks": {
-        "net5.0-windows7.0": {
-          "targetAlias": "net5.0-windows",
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
           "dependencies": {
             "Caliburn.Micro": {
               "target": "Package",
               "version": "[4.0.173, )"
             },
+            "Magick.NET-Q16-AnyCPU": {
+              "target": "Package",
+              "version": "[11.1.2, )"
+            },
+            "Magick.NET.Core": {
+              "target": "Package",
+              "version": "[11.1.2, )"
+            },
             "MahApps.Metro": {
               "target": "Package",
-              "version": "[2.4.7, )"
+              "version": "[2.4.9, )"
             },
             "MahApps.Metro.IconPacks": {
               "target": "Package",
-              "version": "[4.8.0, )"
+              "version": "[4.11.0, )"
             }
           },
           "imports": [
@@ -74,15 +82,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[5.0.12, 5.0.12]"
+              "version": "[6.0.5, 6.0.5]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[5.0.12, 5.0.12]"
+              "version": "[6.0.5, 6.0.5]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-              "version": "[5.0.12, 5.0.12]"
+              "version": "[6.0.5, 6.0.5]"
             }
           ],
           "frameworkReferences": {
@@ -93,7 +101,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -102,14 +110,14 @@
         }
       }
     },
-    "G:\\Seasail\\github\\PackIconTools\\Seasail\\Seasail.csproj": {
+    "D:\\Seasail\\PackIconTools\\Seasail\\Seasail.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Seasail\\github\\PackIconTools\\Seasail\\Seasail.csproj",
+        "projectUniqueName": "D:\\Seasail\\PackIconTools\\Seasail\\Seasail.csproj",
         "projectName": "Seasail",
-        "projectPath": "G:\\Seasail\\github\\PackIconTools\\Seasail\\Seasail.csproj",
+        "projectPath": "D:\\Seasail\\PackIconTools\\Seasail\\Seasail.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "G:\\Seasail\\github\\PackIconTools\\Seasail\\obj\\",
+        "outputPath": "D:\\Seasail\\PackIconTools\\Seasail\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -120,15 +128,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -139,8 +147,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.Extensions.DependencyModel": {
               "target": "Package",
@@ -172,15 +180,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[5.0.12, 5.0.12]"
+              "version": "[6.0.5, 6.0.5]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[5.0.12, 5.0.12]"
+              "version": "[6.0.5, 6.0.5]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-              "version": "[5.0.12, 5.0.12]"
+              "version": "[6.0.5, 6.0.5]"
             }
           ],
           "frameworkReferences": {
@@ -188,7 +196,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

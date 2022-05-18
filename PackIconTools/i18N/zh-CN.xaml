@@ -8,4 +8,5 @@
     <s:String x:Key="s_Generate">生成</s:String>
     <s:String x:Key="s_Size">尺寸</s:String>
     <s:String x:Key="s_SavePath">存放路径</s:String>
+    <s:String x:Key="s_CopyToClipboard">复制PathData到粘贴板</s:String>
 </ResourceDictionary>
