@@ -127,3 +127,6 @@ D:\Seasail\PackIconTools\PackIconTools\obj\Release\net6.0-windows\refint\PackIco
 D:\Seasail\PackIconTools\PackIconTools\obj\Release\net6.0-windows\PackIconTools.pdb
 D:\Seasail\PackIconTools\PackIconTools\obj\Release\net6.0-windows\PackIconTools.genruntimeconfig.cache
 D:\Seasail\PackIconTools\PackIconTools\obj\Release\net6.0-windows\ref\PackIconTools.dll
+D:\Seasail\PackIconTools\PackIconTools\bin\Release\net6.0-windows\PackIconTools.dll.config
+D:\Seasail\PackIconTools\PackIconTools\obj\Release\net6.0-windows\PackIconTools.csproj.SuggestedBindingRedirects.cache
+D:\Seasail\PackIconTools\PackIconTools\obj\Release\net6.0-windows\PackIconTools.dll.config

@@ -336,7 +336,6 @@ D:\Seasail\PackIconTools\PackIconTools\bin\Release\net6.0-windows\win-x64\dbgshi
 D:\Seasail\PackIconTools\PackIconTools\bin\Release\net6.0-windows\win-x64\hostfxr.dll
 D:\Seasail\PackIconTools\PackIconTools\bin\Release\net6.0-windows\win-x64\hostpolicy.dll
 D:\Seasail\PackIconTools\PackIconTools\bin\Release\net6.0-windows\win-x64\mscordaccore.dll
-D:\Seasail\PackIconTools\PackIconTools\bin\Release\net6.0-windows\win-x64\mscordaccore_amd64_amd64_6.0.522.21309.dll
 D:\Seasail\PackIconTools\PackIconTools\bin\Release\net6.0-windows\win-x64\mscordbi.dll
 D:\Seasail\PackIconTools\PackIconTools\bin\Release\net6.0-windows\win-x64\mscorrc.dll
 D:\Seasail\PackIconTools\PackIconTools\bin\Release\net6.0-windows\win-x64\msquic.dll
@@ -596,3 +595,7 @@ D:\Seasail\PackIconTools\PackIconTools\obj\Release\net6.0-windows\win-x64\refint
 D:\Seasail\PackIconTools\PackIconTools\obj\Release\net6.0-windows\win-x64\PackIconTools.pdb
 D:\Seasail\PackIconTools\PackIconTools\obj\Release\net6.0-windows\win-x64\PackIconTools.genruntimeconfig.cache
 D:\Seasail\PackIconTools\PackIconTools\obj\Release\net6.0-windows\win-x64\ref\PackIconTools.dll
+D:\Seasail\PackIconTools\PackIconTools\bin\Release\net6.0-windows\win-x64\PackIconTools.dll.config
+D:\Seasail\PackIconTools\PackIconTools\bin\Release\net6.0-windows\win-x64\mscordaccore_amd64_amd64_6.0.722.32202.dll
+D:\Seasail\PackIconTools\PackIconTools\obj\Release\net6.0-windows\win-x64\PackIconTools.csproj.SuggestedBindingRedirects.cache
+D:\Seasail\PackIconTools\PackIconTools\obj\Release\net6.0-windows\win-x64\PackIconTools.dll.config

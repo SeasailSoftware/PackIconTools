@@ -27,6 +27,63 @@ namespace PackIconTools.ViewModels
 
         public Options Options => IoC.Get<Options>();
 
+        public string[] Letters
+        {
+            get
+            {
+                var letters = new List<string>();
+                for (char i = 'A'; i <= 'Z'; i++)
+                {
+                    letters.Add(i.ToString());
+                }
+                letters.Add("All");
+                return letters.ToArray();
+            }
+        }
+
+        private string _textSearch;
+        public string TextSearch
+        {
+            get => _textSearch;
+            set
+            {
+                if (_textSearch == value) return;
+                _textSearch = value;
+                Letter = null;
+                NotifyOfPropertyChange(() => TextSearch);
+                Kinds.Clear();
+                if (CurrentAssembly != null && value != null)
+                {
+                    foreach (var kind in CurrentAssembly.Kinds)
+                    {
+                        if (kind.KindName.ToUpper().Contains(value.ToUpper()))
+                            Kinds.Add(kind);
+                    }
+                }
+            }
+        }
+
+        private string _letter;
+        public string Letter
+        {
+            get => _letter;
+            set
+            {
+                _letter = value;
+                NotifyOfPropertyChange(() => Letter);
+                Kinds.Clear();
+                if (CurrentAssembly != null && value != null)
+                {
+                    TextSearch = null;
+                    foreach (var kind in CurrentAssembly.Kinds)
+                    {
+                        if (kind.KindName.StartsWith(value) || value.Equals("All"))
+                            Kinds.Add(kind);
+                    }
+                }
+            }
+        }
+
         protected override async Task OnActivateAsync(CancellationToken cancellationToken)
         {
             await base.OnActivateAsync(cancellationToken);
@@ -54,6 +111,7 @@ namespace PackIconTools.ViewModels
 
         public ObservableCollection<AssemblyModel> Assemblies { get; set; } = new ObservableCollection<AssemblyModel>();
 
+        public ObservableCollection<KindModel> Kinds { get; set; } = new ObservableCollection<KindModel>();
 
         private AssemblyModel _currentAssembly;
         public AssemblyModel CurrentAssembly
@@ -63,6 +121,11 @@ namespace PackIconTools.ViewModels
             {
                 _currentAssembly = value;
                 NotifyOfPropertyChange(() => CurrentAssembly);
+                Kinds.Clear();
+                foreach (var kind in value.Kinds)
+                {
+                    Kinds.Add(kind);
+                }
             }
         }
 

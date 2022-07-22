@@ -2,6 +2,7 @@ D:\Publish\IconPackTools\PackIconTools.exe
 D:\Publish\IconPackTools\PackIconTools.dll
 D:\Publish\IconPackTools\PackIconTools.deps.json
 D:\Publish\IconPackTools\PackIconTools.runtimeconfig.json
+D:\Publish\IconPackTools\PackIconTools.dll.config
 D:\Publish\IconPackTools\PackIconTools.pdb
 D:\Publish\IconPackTools\Microsoft.CSharp.dll
 D:\Publish\IconPackTools\Microsoft.VisualBasic.Core.dll
@@ -270,7 +271,7 @@ D:\Publish\IconPackTools\dbgshim.dll
 D:\Publish\IconPackTools\hostfxr.dll
 D:\Publish\IconPackTools\hostpolicy.dll
 D:\Publish\IconPackTools\mscordaccore.dll
-D:\Publish\IconPackTools\mscordaccore_amd64_amd64_6.0.522.21309.dll
+D:\Publish\IconPackTools\mscordaccore_amd64_amd64_6.0.722.32202.dll
 D:\Publish\IconPackTools\mscordbi.dll
 D:\Publish\IconPackTools\mscorrc.dll
 D:\Publish\IconPackTools\msquic.dll

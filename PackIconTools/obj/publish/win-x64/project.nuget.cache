@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zTqhkX5cusCVYNcku3F5ZF1d9CgjbxoPvQUegmWqWyglixWfzH9Dm5ShNCo/FD7WYLo8wm0iYlTze5K6I18hZg==",
+  "dgSpecHash": "Ou0Mxo+bywk2Tukk1J//++Ppj+qTUl579T+GKftpRneEOEvlNluxrZGR7EQxPLEWVKIuF+E7vxO9+TOg1hAJhQ==",
   "success": true,
   "projectFilePath": "D:\\Seasail\\PackIconTools\\PackIconTools\\PackIconTools.csproj",
   "expectedPackageFiles": [
@@ -92,9 +92,9 @@
     "C:\\Users\\Administrator\\.nuget\\packages\\system.threading.accesscontrol\\5.0.0\\system.threading.accesscontrol.5.0.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512",
-    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.5\\microsoft.netcore.app.runtime.win-x64.6.0.5.nupkg.sha512",
-    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.5\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.5.nupkg.sha512",
-    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.5\\microsoft.aspnetcore.app.runtime.win-x64.6.0.5.nupkg.sha512"
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.7\\microsoft.netcore.app.runtime.win-x64.6.0.7.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.7\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.7.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.7\\microsoft.aspnetcore.app.runtime.win-x64.6.0.7.nupkg.sha512"
   ],
   "logs": []
 }
