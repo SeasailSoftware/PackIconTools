@@ -149,11 +149,9 @@
                     Margin="3"
                     ItemsSource="{Binding Sizes}"
                     SelectedItem="{Binding Size}" />
-                <UniformGrid Margin="0,10" Rows="1">
+                <UniformGrid Margin="0,10" Columns="2">
                     <Button
-                        Margin="5,3"
-                        Command="{Binding GenerateCommand}"
-                        Style="{StaticResource MahApps.Styles.Button.Calendar.Header}">
+                        Margin="10,5">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="{icons:MaterialImage Kind=ContentCopy, Brush=Black}" />
                             <TextBlock
@@ -163,7 +161,7 @@
                                 Text="{DynamicResource s_CopyToClipboard}" />
                         </StackPanel>
                     </Button>
-                    <Button Command="{Binding GenerateCommand}" Style="{StaticResource MahApps.Styles.Button.Calendar.Header}">
+                    <Button Command="{Binding GenerateCommand}" Margin="10,5">
                         <StackPanel Orientation="Horizontal">
                             <Image Margin="5,3" Source="{icons:MaterialImage Kind=Export, Brush=Black}" />
                             <TextBlock
@@ -171,6 +169,16 @@
                                 VerticalAlignment="Center"
                                 Foreground="Black"
                                 Text="{DynamicResource s_Generate}" />
+                        </StackPanel>
+                    </Button>
+                    <Button Command="{Binding ExportToXamlCommand}" Margin="10,5">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Margin="5,3" Source="{icons:MaterialImage Kind=FileExport, Brush=Black}" />
+                            <TextBlock
+                                Margin="3"
+                                VerticalAlignment="Center"
+                                Foreground="Black"
+                                Text="{DynamicResource s_ExportToXaml}" />
                         </StackPanel>
                     </Button>
                 </UniformGrid>

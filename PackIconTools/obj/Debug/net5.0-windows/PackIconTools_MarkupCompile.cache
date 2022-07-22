@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-G:\Seasail\github\PackIconTools\PackIconTools\obj\Debug\net5.0-windows\
+D:\Seasail\PackIconTools\PackIconTools\obj\Debug\net5.0-windows\
 PackIconTools
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-G:\Seasail\github\PackIconTools\PackIconTools\App.xaml
-5-364121015
-
-13-1845925560
-261-576114501
-i18N\en-US.xaml;i18N\zh-CN.xaml;Resources\Converters.xaml;Resources\Style.xaml;Views\ShellView.xaml;
+D:\Seasail\PackIconTools\PackIconTools\App.xaml
+6871328280
+1-837405022
+17885901543
+265-802815085
+i18N\en-US.xaml;i18N\zh-CN.xaml;Resources\Converters.xaml;Resources\Style.xaml;Views\Dialogs\LoadingView.xaml;Views\ShellView.xaml;
 
 False
 

@@ -141,5 +141,29 @@ namespace PackIconTools.ViewModels
             }
 
         }, y => CurrentKind != null);
+
+        public RelayCommand ExportToXamlCommand => new RelayCommand(x =>
+        {
+            var dlg = new SaveFileDialog() { Filter = "Xaml File (*.xaml)|*.xaml" };
+            if (dlg.ShowDialog() != DialogResult.OK) return;
+            try
+            {
+                var buffer = new StringBuilder();
+                buffer.AppendLine("<ResourceDictionary xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" xmlns:x=\"http://schemas.microsoft.com/winfx/2006/xaml\">");
+                buffer.AppendLine("<!--  Path  Begin-->");
+                foreach (var kind in CurrentAssembly.Kinds)
+                {
+                    buffer.AppendLine($"      <Geometry x:Key=\"Path_{CurrentAssembly.TypeName}_{kind.KindName}\">{kind.PathData}</Geometry>");
+                }
+                buffer.AppendLine("<!--  Path  End-->");
+                buffer.AppendLine("</ResourceDictionary>");
+                System.IO.File.WriteAllText(dlg.FileName, buffer.ToString(), Encoding.UTF8);
+            }
+            catch (Exception ex)
+            {
+                Seasail.Logging.LogManager.Error(ex);
+            }
+
+        }, y => CurrentAssembly != null);
     }
 }

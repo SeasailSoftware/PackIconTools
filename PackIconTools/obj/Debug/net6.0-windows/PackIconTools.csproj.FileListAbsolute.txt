@@ -127,3 +127,6 @@ D:\Seasail\PackIconTools\PackIconTools\bin\Debug\net6.0-windows\runtimes\win-arm
 D:\Seasail\PackIconTools\PackIconTools\bin\Debug\net6.0-windows\runtimes\win-x64\native\Magick.Native-Q16-x64.dll
 D:\Seasail\PackIconTools\PackIconTools\bin\Debug\net6.0-windows\runtimes\win-x86\native\Magick.Native-Q16-x86.dll
 D:\Seasail\PackIconTools\PackIconTools\obj\Debug\net6.0-windows\PackIconTools_Content.g.cs
+D:\Seasail\PackIconTools\PackIconTools\bin\Debug\net6.0-windows\PackIconTools.dll.config
+D:\Seasail\PackIconTools\PackIconTools\obj\Debug\net6.0-windows\PackIconTools.csproj.SuggestedBindingRedirects.cache
+D:\Seasail\PackIconTools\PackIconTools\obj\Debug\net6.0-windows\PackIconTools.dll.config

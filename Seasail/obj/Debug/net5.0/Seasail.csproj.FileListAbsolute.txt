@@ -28,3 +28,17 @@ G:\Seasail\github\PackIconTools\Seasail\obj\Debug\net5.0\Seasail.csproj.CoreComp
 G:\Seasail\github\PackIconTools\Seasail\obj\Debug\net5.0\Seasail.dll
 G:\Seasail\github\PackIconTools\Seasail\obj\Debug\net5.0\ref\Seasail.dll
 G:\Seasail\github\PackIconTools\Seasail\obj\Debug\net5.0\Seasail.pdb
+D:\Seasail\PackIconTools\Seasail\bin\Debug\net5.0\Seasail.dll.config
+D:\Seasail\PackIconTools\Seasail\bin\Debug\net5.0\Seasail.deps.json
+D:\Seasail\PackIconTools\Seasail\bin\Debug\net5.0\Seasail.dll
+D:\Seasail\PackIconTools\Seasail\bin\Debug\net5.0\ref\Seasail.dll
+D:\Seasail\PackIconTools\Seasail\bin\Debug\net5.0\Seasail.pdb
+D:\Seasail\PackIconTools\Seasail\obj\Debug\net5.0\Seasail.Properties.Resources.resources
+D:\Seasail\PackIconTools\Seasail\obj\Debug\net5.0\Seasail.csproj.GenerateResource.cache
+D:\Seasail\PackIconTools\Seasail\obj\Debug\net5.0\Seasail.GeneratedMSBuildEditorConfig.editorconfig
+D:\Seasail\PackIconTools\Seasail\obj\Debug\net5.0\Seasail.AssemblyInfoInputs.cache
+D:\Seasail\PackIconTools\Seasail\obj\Debug\net5.0\Seasail.AssemblyInfo.cs
+D:\Seasail\PackIconTools\Seasail\obj\Debug\net5.0\Seasail.csproj.CoreCompileInputs.cache
+D:\Seasail\PackIconTools\Seasail\obj\Debug\net5.0\Seasail.dll
+D:\Seasail\PackIconTools\Seasail\obj\Debug\net5.0\ref\Seasail.dll
+D:\Seasail\PackIconTools\Seasail\obj\Debug\net5.0\Seasail.pdb
