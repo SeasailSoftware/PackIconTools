@@ -170,7 +170,7 @@ namespace PackIconTools.Views.Dialogs {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PackIconTools;component/views/dialogs/loadingview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PackIconTools;V1.0.0.0;component/views/dialogs/loadingview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\Dialogs\LoadingView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

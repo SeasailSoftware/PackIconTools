@@ -84,10 +84,10 @@ namespace PackIconTools.ViewModels
             }
         }
 
-        protected override async Task OnActivateAsync(CancellationToken cancellationToken)
+        protected override  Task OnActivateAsync(CancellationToken cancellationToken)
         {
-            await base.OnActivateAsync(cancellationToken);
-            await LoadAssemblies();
+            LoadAssemblies();
+            return base.OnActivateAsync(cancellationToken);
         }
 
         private Task LoadAssemblies()
